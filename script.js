@@ -58,7 +58,35 @@ new DroneDeploy({
                     }
                 })
                 .then(function(exportId) {
-                        dronedeployApi.Messaging.showToast('Export successful! Id: ' + exportId, {
+                    alert(layerSelect.value);
+                        dronedeployApi.Messaging.showToast('Export successful!' + exportId, {
+                            timeout: -1         
+                        });
+                    },
+                    function(error) {
+                        dronedeployApi.Messaging.showToast(error, {
+                            timeout: -1
+                        });
+                    }
+                );
+
+                dronedeployApi.Exporter.send({
+                    layer: 'Orthomosaic',
+                    email: emails,
+
+                    file_format: 'geotiff',
+                    merge: mergeCheckbox.checked ? true : false,
+                    projection: projectionValue.value,
+                    planID: '5968d2856cbda58f3fb0fade',
+                    resolution: resolutionValue.value === 0 ? 'native' : resolutionValue.value,
+                    url: '9226160d.proxy.webhookapp.com',
+                    webhook: {
+                        url: '9226160d.proxy.webhookapp.com'
+                    }
+                })
+                .then(function(exportId) {
+                    alert(layerSelect.value);
+                        dronedeployApi.Messaging.showToast('2nd Export successful!' + exportId, {
                             timeout: -1         
                         });
                     },
