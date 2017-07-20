@@ -39,17 +39,17 @@ new DroneDeploy({
                 deleteEmailFromList(index);
             }
         })
-    /*.then(function(dronedeployApi) {
+    .then(function(dronedeployApi) {
                 return dronedeployApi.Plans.getCurrentlyViewed()
                     .then(function(plan) {
                         return dronedeployApi.Annotations.get(plan.id, {
                             comments: true
                         })
                     })
-            })*/
+            })
         exportBtn.addEventListener('click', function(event) {
             event.preventDefault();
-
+            alert('clicked');
             dronedeployApi.Exporter.send({
                     layer: 'Orthomosaic',
                     email: emails,
@@ -65,6 +65,7 @@ new DroneDeploy({
                     }
                 })
                 .then(function(exportId) {
+                    alert('ortho');
                         dronedeployApi.Messaging.showToast('Orthomosaic export successful!', {
                             timeout: -1         
                         });
@@ -91,6 +92,7 @@ new DroneDeploy({
                     }
                 })
                 .then(function(exportId) {
+                    alert('ndvi');
                         dronedeployApi.Messaging.showToast('NDVI export successful!', {
                             timeout: -1         
                         });
