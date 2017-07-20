@@ -50,9 +50,9 @@ new DroneDeploy({
                     merge: mergeCheckbox.checked ? true : false,
                     projection: projectionValue.value,
                     resolution: resolutionValue.value === 0 ? 'native' : resolutionValue.value,
-                    url: '9226160d.proxy.webhookapp.com',
+                    url: 'http://webhook.site/a8cdfdfd-7edc-49b7-ac14-203fab215c61',
                     webhook: {
-                        url: '9226160d.proxy.webhookapp.com'
+                        url: 'http://webhook.site/a8cdfdfd-7edc-49b7-ac14-203fab215c61'
                     }
                 })
                 .then(function(exportId) {
@@ -75,9 +75,9 @@ new DroneDeploy({
                     merge: mergeCheckbox.checked ? true : false,
                     projection: projectionValue.value,
                     resolution: resolutionValue.value === 0 ? 'native' : resolutionValue.value,
-                    url: '9226160d.proxy.webhookapp.com',
+                    url: 'http://webhook.site/a8cdfdfd-7edc-49b7-ac14-203fab215c61',
                     webhook: {
-                        url: '9226160d.proxy.webhookapp.com'
+                        url: 'http://webhook.site/a8cdfdfd-7edc-49b7-ac14-203fab215c61'
                     }
                 })
                 .then(function(exportId) {
