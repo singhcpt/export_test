@@ -42,6 +42,7 @@ new DroneDeploy({
 
         exportBtn.addEventListener('click', function(event) {
             event.preventDefault();
+
             dronedeployApi.Exporter.send({
                     layer: 'Orthomosaic',
                     email: emails,
