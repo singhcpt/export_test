@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://s3.amazonaws.com/drone-deploy-plugins/templates/uikit/v1/styles.css">
+</head>
+
+<body>
+    <h1 class="title sans">PlantVillage Report Exporter</h1>
+    <p>
+        Enter the following information. 
+        A PDF report will be sent to your 
+        email detailing analysis of your 
+        crop health and damage.
+    </p>
+    <form class="form-group">
+        <input class="sans" type="email" id="email" placeholder="Enter an email to send to" />
+    </form>
+    <button type="button" id="addEmailBtn" class="btn">Add email</button>
+    <ol id="emails"></ol>
+    <br />
+    <div class="form-group">
+        <label for="layer-select">Select Layer Type</label>
+        <select name="layer" id="layer-select">
+          <option value="Orthomosaic">Orthomosaic</option>
+          <option value="NDVI Toolbox">NDVI Toolbox</option>
+          <option value="Elevation Toolbox">Elevation Toolbox</option>
+          <option value="3D Model">3D Model</option>
+        </select>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="file-format">Select File Format</label>
+        <select name="file-format" id="file-format">
+        <option value="geotiff">Geotiff</option>
+        <option value="jpg">JPG</option>
+        <option value="shapefile">Shapefile</option>
+      </select>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="merge-box">Merge?</label>
+        <input type="checkbox" value="merge" id="merge-box" />
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="projection-value">Projection</label>
+        <input type="number" min="0" max="5000" value="3857" id="projection-value">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="resolution-value">Resolution (0 for 'native')</label>
+        <input type="number" value="5" min="0" max="10" id="resolution-value">
+    </div>
+    <br>
+    <button type="button" id="export" class="btn">Export</button>
+    <span id="exportMessage"></span>
+    <script src="script.js"></script>
+</body>
+</html>
