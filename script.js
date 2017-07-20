@@ -39,9 +39,16 @@ new DroneDeploy({
                 deleteEmailFromList(index);
             }
         })
+    /*.then(function(dronedeployApi) {
+                return dronedeployApi.Plans.getCurrentlyViewed()
+                    .then(function(plan) {
+                        return dronedeployApi.Annotations.get(plan.id, {
+                            comments: true
+                        })
+                    })
+            })*/
         exportBtn.addEventListener('click', function(event) {
             event.preventDefault();
-
 
             dronedeployApi.Exporter.send({
                     layer: 'Orthomosaic',
@@ -50,7 +57,7 @@ new DroneDeploy({
                     file_format: 'geotiff',
                     merge: mergeCheckbox.checked ? true : false,
                     projection: projectionValue.value,
-                    planID: '5968d2856cbda58f3fb0fade',
+                    planID: plan.id,
                     resolution: resolutionValue.value === 0 ? 'native' : resolutionValue.value,
                     url: '9226160d.proxy.webhookapp.com',
                     webhook: {
@@ -76,7 +83,7 @@ new DroneDeploy({
                     file_format: 'geotiff',
                     merge: mergeCheckbox.checked ? true : false,
                     projection: projectionValue.value,
-                    planID: '5968d2856cbda58f3fb0fade',
+                    planID: plan.id,
                     resolution: resolutionValue.value === 0 ? 'native' : resolutionValue.value,
                     url: '9226160d.proxy.webhookapp.com',
                     webhook: {
