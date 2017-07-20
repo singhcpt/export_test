@@ -56,7 +56,6 @@ new DroneDeploy({
                     }
                 })
                 .then(function(exportId) {
-                    alert('ortho');
                         dronedeployApi.Messaging.showToast('Orthomosaic export successful!', {
                             timeout: -1         
                         });
@@ -82,7 +81,6 @@ new DroneDeploy({
                     }
                 })
                 .then(function(exportId) {
-                    alert('ndvi');
                         dronedeployApi.Messaging.showToast('NDVI export successful!', {
                             timeout: -1         
                         });
