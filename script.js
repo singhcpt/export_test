@@ -51,9 +51,9 @@ new DroneDeploy({
                     merge: mergeCheckbox.checked ? true : false,
                     projection: projectionValue.value,
                     resolution: resolutionValue.value === 0 ? 'native' : resolutionValue.value,
-                    url: 'http://webhook.site/a8cdfdfd-7edc-49b7-ac14-203fab215c61', //change link
+                    url: 'http://webhook.site/a8cdfdfd-7edc-49b7-ac14-203fab215c61', //webhook does not work
                     webhook: {
-                        url: 'http://webhook.site/a8cdfdfd-7edc-49b7-ac14-203fab215c61' //change link
+                        url: 'http://webhook.site/a8cdfdfd-7edc-49b7-ac14-203fab215c61' 
                     }
                 })
                 .then(function(exportId) {
@@ -76,9 +76,9 @@ new DroneDeploy({
                     merge: mergeCheckbox.checked ? true : false,
                     projection: projectionValue.value,
                     resolution: resolutionValue.value === 0 ? 'native' : resolutionValue.value,
-                    url: 'http://webhook.site/a8cdfdfd-7edc-49b7-ac14-203fab215c61', //change link
+                    url: 'http://webhook.site/a8cdfdfd-7edc-49b7-ac14-203fab215c61', //webhook does not work
                     webhook: {
-                        url: 'http://webhook.site/a8cdfdfd-7edc-49b7-ac14-203fab215c61' //change link
+                        url: 'http://webhook.site/a8cdfdfd-7edc-49b7-ac14-203fab215c61' 
                     }
                 })
                 .then(function(exportId) {
