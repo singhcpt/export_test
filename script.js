@@ -46,13 +46,12 @@ new DroneDeploy({
                     layer: 'Orthomosaic',
                     email: emails,
 
-                    file_format: 'geotiff',
+                    //file_format: 'jpg',
                     merge: mergeCheckbox.checked ? true : false,
                     projection: projectionValue.value,
                     resolution: resolutionValue.value === 0 ? 'native' : resolutionValue.value,
-                    //url: 'http://webhook.site/a8cdfdfd-7edc-49b7-ac14-203fab215c61', //webhook does not work
                     webhook: {
-                        url: 'http://webhook.site/a8cdfdfd-7edc-49b7-ac14-203fab215c61' 
+                        url: 'http://webhook.site/3d10872c-a56e-4b2b-aa3b-b8c0334e8f5f' 
                     }
                 })
                 .then(function(exportId) {
@@ -71,13 +70,12 @@ new DroneDeploy({
                     layer: 'NDVI Toolbox',
                     email: emails,
 
-                    file_format: 'geotiff',
+                    //file_format: 'jpg',
                     merge: mergeCheckbox.checked ? true : false,
                     projection: projectionValue.value,
                     resolution: resolutionValue.value === 0 ? 'native' : resolutionValue.value,
-                    url: 'http://webhook.site/a8cdfdfd-7edc-49b7-ac14-203fab215c61', //webhook does not work
                     webhook: {
-                        url: 'http://webhook.site/a8cdfdfd-7edc-49b7-ac14-203fab215c61' 
+                        url: 'http://webhook.site/3d10872c-a56e-4b2b-aa3b-b8c0334e8f5f' 
                     }
                 })
                 .then(function(exportId) {
