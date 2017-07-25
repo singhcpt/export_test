@@ -7,6 +7,8 @@ var exportMessage = document.getElementById('exportMessage');
 var mergeCheckbox = document.getElementById('merge-box');
 var projectionValue = document.getElementById('projection-value');
 var resolutionValue = document.getElementById('resolution-value');
+var fileForm = document.getElementById('fileForm');
+fileForm.style.display = 'none';
 var emails = [];
 
 function formatEmailList(emails) {
