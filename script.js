@@ -53,7 +53,7 @@ new DroneDeploy({
                     projection: projectionValue.value,
                     resolution: resolutionValue.value === 0 ? 'native' : resolutionValue.value,
                     webhook: {
-                        url: 'http://webhook.site/3d10872c-a56e-4b2b-aa3b-b8c0334e8f5f' 
+                        url: 'https://requestb.in/yhu1skyh'
                     }
                 })
                 .then(function(exportId) {
@@ -77,7 +77,7 @@ new DroneDeploy({
                     projection: projectionValue.value,
                     resolution: resolutionValue.value === 0 ? 'native' : resolutionValue.value,
                     webhook: {
-                        url: 'http://webhook.site/3d10872c-a56e-4b2b-aa3b-b8c0334e8f5f' 
+                        url: 'https://requestb.in/yhu1skyh'
                     }
                 })
                 .then(function(exportId) {
