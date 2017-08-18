@@ -7,8 +7,9 @@ var exportMessage = document.getElementById('exportMessage');
 var mergeCheckbox = document.getElementById('merge-box');
 var projectionValue = document.getElementById('projection-value');
 var resolutionValue = document.getElementById('resolution-value');
-var fileForm = document.getElementById('fileForm');
-fileForm.style.display = 'none';
+var fileForm = document.getElementById('file-format');
+var fileFormat = fileForm.options[fileForm.selectedIndex].value;
+//fileForm.style.display = 'none';
 var emails = [];
 
 function formatEmailList(emails) {
@@ -48,7 +49,7 @@ new DroneDeploy({
                     layer: 'Orthomosaic',
                     email: emails,
 
-                    //file_format: 'jpg',
+                    file_format: fileFormat,
                     merge: mergeCheckbox.checked ? true : false,
                     projection: projectionValue.value,
                     resolution: resolutionValue.value === 0 ? 'native' : resolutionValue.value,
@@ -72,7 +73,7 @@ new DroneDeploy({
                     layer: 'NDVI Toolbox',
                     email: emails,
 
-                    //file_format: 'jpg',
+                    file_format: fileFormat,
                     merge: mergeCheckbox.checked ? true : false,
                     projection: projectionValue.value,
                     resolution: resolutionValue.value === 0 ? 'native' : resolutionValue.value,
